@@ -88,6 +88,9 @@
     console.log('linkHTML', linkHTML);
 
     /* insert link into titleList */
+
+    titleList.insertAdjacentHTML("beforebegin", linkHTML);
+
     }
   }
 
