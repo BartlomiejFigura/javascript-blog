@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
-
+@import url('<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Unica+One" rel="stylesheet">');
 /* Variables */
 
-$color-light: #fff;
-$color-dark: #444;
+$color-light: #ced6e0; /*twinklebluechina*/
+$color-dark: #2f3542; /*prestigebluechina*/
+$hover-color: #57606f; /*grissaillechinese*/
+$section-color: #ffffff; 
 
-$font-logo: 'Sacramento', cursive;
-$font-header: 'Oswald', sans-serif;
-$font-text: 'Source Sans Pro', sans-serif;
+$font-logo: 'Sacramento', Cursive;
+$font-header: 'Unica One', Cursive;
+$font-text: 'Crimson Text', Serif;
 
 /* Global */
 
@@ -23,7 +25,10 @@ body {
   font-size: 16px;
   line-height: 1.7;
 }
-
+a {
+  text-decoration: none;
+  color: $hover-color;
+}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -45,6 +50,7 @@ body {
 
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 10px;
 }
 
@@ -57,8 +63,8 @@ body {
 }
 
 .sidebar, .posts {
-  background: $color-light;
-  margin-right: 10px;
+  background: $section-color;
+  margin-right: 30px;
   padding: 40px;
   border: 1px solid $color-dark;
   border-radius: 5px;
@@ -66,12 +72,23 @@ body {
 
 /* Logo */
 
+/*.div-logo {
+  background-image: url('/images/background-tiny.jpg');
+  object-fit: cover;
+  height: 150px;
+  margin:30px;
+}*/
+
 .logo {
   font-family: $font-logo;
-  font-weight: 400;
-  font-size: 104px;
+  text-shadow: 3px 3px $section-color;
+  font-weight: 500;
+  font-size: 110px;
   line-height: 1;
   text-align: center;
+  background-image: url('/images/abstract.jpg');
+  height: 150px;
+  
 }
 
 /* Lists */
@@ -118,3 +135,4 @@ body {
     margin: 0 10px 0 0;
   }
 }
+/*mediaqueries*/
