@@ -109,7 +109,6 @@ a {
 
 .post.active {
   display: block;
-  z-index: 1;
 }
 
 .post-author {
