@@ -43,11 +43,7 @@
     targetArticle.classList.add('active');
    }
 
-  /*const links = document.querySelectorAll('.titles a');
-  console.log('links',links);
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-  }*/
+
 
   const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
@@ -84,7 +80,7 @@
     const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
     console.log('linkHTML', linkHTML);
 
-    /*[IN PROGRESS] insert link into titleList */
+    /*[DONE] insert link into titleList */
 
     html = html + linkHTML;
     console.log('htmmml', html)

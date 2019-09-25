@@ -47,6 +47,8 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   margin-left: 10px;
 }
 
@@ -64,17 +66,11 @@ a {
   background: #ffffff;
   margin-right: 30px;
   padding: 40px;
-  border: 1px solid #2f3542;
+  border: 2px solid #2f3542;
   border-radius: 5px;
 }
 
 /* Logo */
-/*.div-logo {
-  background-image: url('/images/background-tiny.jpg');
-  object-fit: cover;
-  height: 150px;
-  margin:30px;
-}*/
 .logo {
   font-family: "Sacramento", Cursive;
   text-shadow: 3px 3px #ffffff;
@@ -113,6 +109,7 @@ a {
 
 .post.active {
   display: block;
+  z-index: 1;
 }
 
 .post-author {
@@ -129,4 +126,15 @@ a {
 }
 
 /*mediaqueries*/
+@media (max-width: 767px) {
+  .wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .sidebar, .posts {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

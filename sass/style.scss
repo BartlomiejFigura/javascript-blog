@@ -7,6 +7,7 @@ $color-dark: #2f3542; /*prestigebluechina*/
 $hover-color: #57606f; /*grissaillechinese*/
 $section-color: #ffffff; 
 
+
 $font-logo: 'Sacramento', Cursive;
 $font-header: 'Unica One', Cursive;
 $font-text: 'Crimson Text', Serif;
@@ -51,6 +52,7 @@ a {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-left: 10px;
 }
 
@@ -66,18 +68,12 @@ a {
   background: $section-color;
   margin-right: 30px;
   padding: 40px;
-  border: 1px solid $color-dark;
+  border: 2px solid $color-dark;
   border-radius: 5px;
 }
 
 /* Logo */
 
-/*.div-logo {
-  background-image: url('/images/background-tiny.jpg');
-  object-fit: cover;
-  height: 150px;
-  margin:30px;
-}*/
 
 .logo {
   font-family: $font-logo;
@@ -122,6 +118,7 @@ a {
   display: none;
   &.active {
     display: block;
+    z-index: 1;
   }
 }
 
@@ -136,3 +133,15 @@ a {
   }
 }
 /*mediaqueries*/
+
+@media (max-width: 767px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  .sidebar, .posts {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+}
