@@ -5,8 +5,7 @@
 $color-light: #ced6e0; /*twinklebluechina*/
 $color-dark: #2f3542; /*prestigebluechina*/
 $hover-color: #57606f; /*grissaillechinese*/
-$section-color: #ffffff; 
-
+$section-color: #ffffff;
 
 $font-logo: 'Sacramento', Cursive;
 $font-header: 'Unica One', Cursive;
@@ -26,10 +25,12 @@ body {
   font-size: 16px;
   line-height: 1.7;
 }
+
 a {
   text-decoration: none;
   color: $hover-color;
 }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -40,6 +41,7 @@ a {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+  
   span {
     text-transform: none;
     font-weight: 400;
@@ -93,7 +95,8 @@ a {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  .active {
+
+  .active{
     font-weight: bold;
   }
 }
@@ -116,6 +119,7 @@ a {
 
 .post {
   display: none;
+  
   &.active {
     display: block;
     
@@ -128,6 +132,7 @@ a {
 
 .post-tags {
   display: flex;
+  
   p {
     margin: 0 10px 0 0;
   }
@@ -138,6 +143,7 @@ a {
   .wrapper{
     flex-direction: column;
   }
+  
   .sidebar, .posts {
     text-align: center;
     margin-top: 30px;
