@@ -41,7 +41,7 @@ a {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
-  
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -86,7 +86,7 @@ a {
   text-align: center;
   background-image: url('/images/abstract.jpg');
   height: 150px;
-  
+
 }
 
 /* Lists */
@@ -119,10 +119,10 @@ a {
 
 .post {
   display: none;
-  
+
   &.active {
     display: block;
-    
+
   }
 }
 
@@ -132,7 +132,7 @@ a {
 
 .post-tags {
   display: flex;
-  
+
   p {
     margin: 0 10px 0 0;
   }
@@ -143,11 +143,10 @@ a {
   .wrapper{
     flex-direction: column;
   }
-  
+
   .sidebar, .posts {
     text-align: center;
     margin-top: 30px;
     margin-left: 30px;
   }
-
 }
