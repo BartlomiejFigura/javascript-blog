@@ -95,16 +95,16 @@
       link.addEventListener('click', titleClickHandler);
     }
   };
-
   generateTitleLinks();
-
 
   function generateTags(){
   /*[DONE] find all articles */
+
     const articles = document.querySelectorAll('.posts article');
     console.log('articles', articles);
 
     /* [DONE]START LOOP: for every article: */
+
     for (let article of articles){
       console.log('article', article);
 
@@ -121,26 +121,24 @@
       /*[DONE] get tags from data-tags attribute */
 
       const articleTags =article.getAttribute('data-tags');
-
       console.log('articleTags',articleTags);
 
-      /*[IN PROGRESS] split tags into array */
+      /*[DONE] split tags into array */
 
       const tagsIntoArray = articleTags.split(' ');
       console.log('tagsIntoArray',tagsIntoArray);
-      /*const tagsIntoArray = document.querySelectorAll('.posts article');
-      console.log('', articles);*/
 
-
-      /*[IN PROGRESS] START LOOP: for each tag */
+      /*[DONE] START LOOP: for each tag */
 
       for(let tag of tagsIntoArray){
         console.log('tag',tag);
-        /* generate HTML of the link */
 
+        /*[DONE] generate HTML of the link */
 
+        const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+        console.log('linkHTML', linkHTML);
 
-        /* add generated code to html variable */
+        /*[IN PROGRESS] add generated code to html variable */
 
 
 
