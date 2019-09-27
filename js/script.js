@@ -124,25 +124,29 @@
 
       console.log('articleTags',articleTags);
 
-      /* split tags into array */
+      /*[IN PROGRESS] split tags into array */
+
+      const tagsIntoArray = articleTags.split(' ');
+      console.log('tagsIntoArray',tagsIntoArray);
+      /*const tagsIntoArray = document.querySelectorAll('.posts article');
+      console.log('', articles);*/
+
+
+      /*[IN PROGRESS] START LOOP: for each tag */
+
+      for(let tag of tagsIntoArray){
+        console.log('tag',tag);
+        /* generate HTML of the link */
 
 
 
-      /* START LOOP: for each tag */
+        /* add generated code to html variable */
 
 
 
-      /* generate HTML of the link */
+        /* END LOOP: for each tag */
 
-
-
-      /* add generated code to html variable */
-
-
-
-      /* END LOOP: for each tag */
-
-
+      }
 
       /* insert HTML of all the links into the tags wrapper */
 
