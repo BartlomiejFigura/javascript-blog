@@ -114,13 +114,15 @@
       console.log('tagsWrapper', tagsWrapper);
       tagsWrapper.innerHTML='';
 
-      /* [IN PROGRESS] make html variable with empty string */
+      /* [DONE] make html variable with empty string */
 
+      let html = '';
 
+      /*[DONE] get tags from data-tags attribute */
 
-      /* get tags from data-tags attribute */
+      const articleTags =article.getAttribute('data-tags');
 
-
+      console.log('articleTags',articleTags);
 
       /* split tags into array */
 
