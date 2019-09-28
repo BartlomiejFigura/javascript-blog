@@ -193,6 +193,7 @@
       /* [DONE]remove class active */
 
       activeTagLink.classList.remove('active');
+      console.log(activeTagLink.classList.contains('active')); /*false*/
 
       /* [DONE] END LOOP: for each active tag link */
 
@@ -205,15 +206,16 @@
 
     /* [IN PROGRESS] START LOOP: for each found tag link */
 
-    /*for(){*/
+    for(let equalTagLink of equalTagLinks){
 
-    /* add class active */
+      /*[IN PROGRESS] add class active */
 
+      equalTagLink.classList.add('active');
+      console.log(equalTagLink.classList.contains('active')); /*true*/
 
+      /* END LOOP: for each found tag link */
 
-    /* END LOOP: for each found tag link */
-
-    /*}*/
+    }
 
     /* execute function "generateTitleLinks" with article selector as argument */
   };
