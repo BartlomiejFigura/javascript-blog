@@ -168,16 +168,18 @@
     /*[DONE] make new constant named "clickedElement" and give it the value of "this" */
 
     const clickedElement = this;
-    console.log('Link was clicked!');
-    console.log(event);
+    console.log('Link was cliiiicked!');
+    console.log('eveeent',event);
 
-    /*[IN PROGRESS] make a new constant "href" and read the attribute "href" of the clicked element */
+    /*[DONE] make a new constant "href" and read the attribute "href" of the clicked element */
 
-    const href =
+    const href = clickedElement.getAttribute('href');
+    console.log('hrefffff',href);
 
-    /* make a new constant "tag" and extract tag from the "href" constant */
+    /*[DONE] make a new constant "tag" and extract tag from the "href" constant */
 
-
+    const tag = href.replace('#tag-','');
+    console.log(tag);
 
     /* find all tag links with class active */
 
