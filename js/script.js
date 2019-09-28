@@ -198,13 +198,14 @@
 
     }
 
-    /*[IN PROGRESS] find all tag links with "href" attribute equal to the "href" constant */
+    /*[DONE] find all tag links with "href" attribute equal to the "href" constant */
 
-
+    const equalTagLinks = document.querySelectorAll('a[href="' + href + '"]');
+    console.log('equalTagLinks',equalTagLinks);
 
     /* [IN PROGRESS] START LOOP: for each found tag link */
 
-    for(){
+    /*for(){*/
 
     /* add class active */
 
@@ -212,7 +213,7 @@
 
     /* END LOOP: for each found tag link */
 
-    }
+    /*}*/
 
     /* execute function "generateTitleLinks" with article selector as argument */
   };
