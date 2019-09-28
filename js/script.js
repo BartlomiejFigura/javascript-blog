@@ -1,9 +1,5 @@
 {'use strict';
 
-  /*document.getElementById('test-button').addEventListener('click', function(){
-    const links = document.querySelectorAll('.titles a');
-    console.log('links:', links);
-  });*/
   const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -97,7 +93,7 @@
   };
   generateTitleLinks();
 
-  function generateTags(){
+  const generateTags = function(){
   /*[DONE] find all articles */
 
     const articles = document.querySelectorAll('.posts article');
@@ -160,22 +156,24 @@
 
     }
 
-  }
+  };
 
   generateTags();
 
-  function tagClickHandler(event){
-    /* prevent default action for this event */
+  const tagClickHandler = function(event){
+    /*[DONE] prevent default action for this event */
 
+    event.preventDefault();
 
+    /*[DONE] make new constant named "clickedElement" and give it the value of "this" */
 
-    /* make new constant named "clickedElement" and give it the value of "this" */
+    const clickedElement = this;
+    console.log('Link was clicked!');
+    console.log(event);
 
+    /*[IN PROGRESS] make a new constant "href" and read the attribute "href" of the clicked element */
 
-
-    /* make a new constant "href" and read the attribute "href" of the clicked element */
-
-
+    const href =
 
     /* make a new constant "tag" and extract tag from the "href" constant */
 
@@ -214,9 +212,9 @@
 
 
     /* execute function "generateTitleLinks" with article selector as argument */
-  }
+  };
 
-  function addClickListenersToTags(){
+  const addClickListenersToTags = function(){
     /* find all links to tags */
 
 
@@ -230,7 +228,7 @@
 
 
     /* END LOOP: for each link */
-  }
+  };
 
   addClickListenersToTags();
 
