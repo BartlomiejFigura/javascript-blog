@@ -217,29 +217,29 @@
 
     }
 
-    /* [DONE]execute function "generateTitleLinks" with article selector as argument */
+    /* [DONE ]execute function "generateTitleLinks" with article selector as argument */
 
     generateTitleLinks('[data-tags~="' + tag + '"]');
 
   };
 
   const addClickListenersToTags = function(){
-    /* find all links to tags */
+    /* [DONE]find all links to tags */
 
+    const links = document.querySelectorAll('a[href^="#tag-"]');
 
+    /* [DONE] START LOOP: for each link */
 
-    /* START LOOP: for each link */
+    for(let link of links){
 
+      /* [DONE] add tagClickHandler as event listener for that link */
 
-
-    /* add tagClickHandler as event listener for that link */
-
-
+      link.addEventListener('click', tagClickHandler);
 
     /* END LOOP: for each link */
+    }
   };
-
   addClickListenersToTags();
 
-
 }
+
