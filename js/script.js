@@ -49,16 +49,16 @@
 
   /*[DONE] remove contents of titleList */
 
-  const generateTitleLinks = function(){
+  const generateTitleLinks = function(customSelector = ''){
     const titleList = document.querySelector(optTitleListSelector);
     console.log('titleList', titleList);
     titleList.innerHTML='';
 
     /* [DONE]find all the articles adn save them to variable */
 
-    const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector + customSelector);
     console.log('articles',articles);
-
+    console.log('customSelector', customSelector);
     /* [DONE]for each article */
     let html = '';
     for(let article of articles){
@@ -204,11 +204,11 @@
     const equalTagLinks = document.querySelectorAll('a[href="' + href + '"]');
     console.log('equalTagLinks',equalTagLinks);
 
-    /* [IN PROGRESS] START LOOP: for each found tag link */
+    /* [DONE] START LOOP: for each found tag link */
 
     for(let equalTagLink of equalTagLinks){
 
-      /*[IN PROGRESS] add class active */
+      /*[DONE] add class active */
 
       equalTagLink.classList.add('active');
       console.log(equalTagLink.classList.contains('active')); /*true*/
@@ -217,7 +217,10 @@
 
     }
 
-    /* execute function "generateTitleLinks" with article selector as argument */
+    /* [DONE]execute function "generateTitleLinks" with article selector as argument */
+
+    generateTitleLinks('[data-tags~="' + tag + '"]');
+
   };
 
   const addClickListenersToTags = function(){
