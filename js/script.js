@@ -255,15 +255,15 @@
 
       /*[DONE] find authors wrapper */
 
-      /*const authorsWrapper = article.querySelector(optArticleTagsSelector);
-      console.log('tagsWrapper', tagsWrapper);
-      tagsWrapper.innerHTML='';
+      const authorsWrapper = document.querySelector(optArticleAuthorSelector);
+      console.log('authorsWrapper', authorsWrapper);
+      authorsWrapper.innerHTML='';
 
       /* [DONE] make html variable with empty string */
 
-      /*let html = '';
+      let html = '';
 
-      /*[DONE] get tags from data-tags attribute */
+      /*[IN PROGRESS] get tags from data-tags attribute */
 
       /*const articleTags =article.getAttribute('data-tags');
       console.log('articleTags',articleTags);
