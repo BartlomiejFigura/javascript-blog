@@ -45,7 +45,7 @@
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
-    optArticleAuthorSelector = '.posts .post-author';
+    optArticleAuthorSelector = '.post .post-author';
 
 
   /*[DONE] remove contents of titleList */
@@ -242,59 +242,48 @@
   };
   addClickListenersToTags();
 
-  const generateAuthors = function(){
-    /*[DONE] find all authors */
 
-    const authors = document.querySelectorAll('.posts .post-author');
-    console.log('authors', authors);
-
-    /* [DONE]START LOOP: for every author: */
-
-    for (let author of authors){
-      console.log('author', author);
-
-      /*[DONE] find authors wrapper */
-
-      const authorsWrapper = document.querySelector(optArticleAuthorSelector);
-      console.log('authorsWrapper', authorsWrapper);
-      authorsWrapper.innerHTML='';
-
-      /* [DONE] make html variable with empty string */
-
-      let html = '';
-
-      /*[IN PROGRESS] get attribute id from authors wrapper*/
-
-      const authorTag = authorsWrapper.getAttribute('id');
-      console.log('authorTag',authorTag);
-
-      /*[DONE] generate HTML of the link */
-
-      const authorHTML = '<li><a href="#"><span class="author-name" >' + authorTag + '</span></a></li>';
-      console.log('authorHTML', authorHTML);
-
-      /*[DONE] add generated code to html variable */
-
-      html = html + authorHTML;
-      console.log('htmlAuthor', html);
-
-
-      /*[IN PROGRESS] insert HTML of all the links into the authors wrapper */
-
-      /*authorsWrapper.innerHTML = html;
-      const links = document.querySelectorAll('.list a');
-      console.log('links',links);
-      for(let link of links){
-        link.addEventListener('click', authorClickHandler);
-      }
-
-      /*[DONE] END LOOP: for every author: */
-
+  const authorClickHandler = function(event){
+    event.preventDefault();
+    const clickedElement = this;
+    const href = clickedElement.getAttribute('href');
+    const authorHref = href.replace('#','');
+    const authorTag = authorHref.replace('-','');
+    const activeAuthorLinks = document.querySelectorAll('.list.authors a.active');
+    for(let activeAuthorLink of activeAuthorLinks){
+      activeAuthorLink.classList.remove('active');
     }
-
+    const equalAuthorLinks = document.querySelectorAll('a[href="' + href + '"]');
+    for(let equalAuthorLink of equalAuthorLinks){
+      equalAuthorLink.classList.add('active');
+    }
+    generateTitleLinks('[data-author="' + authorTag + '"]');
+    console.log('hhhhhhhh',generateTitleLinks);
   };
 
+
+  const addClickListenersToAuthors = function(){
+    const links = document.querySelectorAll('.list.authors a');
+    for(let link of links){
+      link.addEventListener('click', authorClickHandler);
+    }
+  };
+  addClickListenersToAuthors();
+
+
+  const generateAuthors = function(){
+    const articles = document.querySelectorAll(optArticleSelector);
+    for (let article of articles){
+      const authorsWrapper = article.querySelector(optArticleAuthorSelector);
+      const authorTag = article.getAttribute('data-author');
+      const authorHref = authorTag.replace(' ', '-');
+      const authorHTML = '<li><a href="#' + authorHref + '"><span class="author-name" >' + authorTag + '</span></a></li>';
+      console.log('authorHTML',authorHTML);
+      authorsWrapper.innerHTML += authorHTML;
+    }
+  };
   generateAuthors();
+
 
 
 
